@@ -18,7 +18,7 @@ function App(){
 
     let commentBlock = (
         <div className="comment">
-            
+        <h3>Number of Comments: {comments.length}</h3>
         <ul>
             {comments.map((comment, index)=>(
                 <li key={index}>{comment.text}</li>
@@ -26,13 +26,13 @@ function App(){
         </ul>
     </div>
     )
-    let showComments = false;
+    let showComments = true;
     let commentMessage = "You have four Comments: "
     return(
         <div className="container">
             <h1>{title.toUpperCase()}!</h1>
             <p>{body}</p>
-            <h3>Number of Comments: {comments.length}</h3>
+            
             {showComments ? commentBlock : commentMessage+ comments.length}
 
            
