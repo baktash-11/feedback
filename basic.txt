@@ -17,7 +17,7 @@ delete everything from src folder
 src folder 
 	create a file index.js
 		import react from “react”
-		import RactDOM from “react-don”
+		import ReactDOM from “react-don”
 		
 		reactDOM.render(<h1>My App </h1>, document.getElementById(‘root’))
 
@@ -32,7 +32,7 @@ src folder
 			  { id: 3, text: "comment three" },
 			  { id: 4, text: "comment four" }
 			];
-			//condation
+			//condition
 			let loading = false;
 			let showComments = true;
 			let commentBlock = (
