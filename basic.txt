@@ -1,0 +1,74 @@
+npx create-react-app appName —use-npm 
+cd appName 
+code . 
+nom start 
+
+package.json 
+dependencies 
+
+public folder 
+	index.html 
+		<div id =“root></div>
+
+
+
+src is the main folder for …. 
+delete everything from src folder  
+src folder 
+	create a file index.js
+		import react from “react”
+		import RactDOM from “react-don”
+		
+		reactDOM.render(<h1>My App </h1>, document.getElementById(‘root’))
+
+	create a file App.js //main component. components are either class or functions
+		function App() {
+			let title = "Blog Post";
+			let body = "This is my Blog Post!";
+			//adding comment in a list
+			let comments = [
+			  { id: 1, text: "comment one" },
+			  { id: 2, text: "comment two" },
+			  { id: 3, text: "comment three" },
+			  { id: 4, text: "comment four" }
+			];
+			//condation
+			let loading = false;
+			let showComments = true;
+			let commentBlock = (
+			  <div className="comments">
+				<h3>Comments: {comments.length}</h3>
+				<ol>
+				  {comments.map((comm, index) => (
+					<li key={comm.id}>{comm.text}</li>
+				  ))}
+				</ol>
+			  </div>
+			);
+			if (loading) return <h1>Loading...</h1>;
+		  
+			return (
+			  <div className="container">
+				<h1>{title}</h1>
+				<p>{body}</p>
+				{showComments ? commentBlock : null}
+			  </div>
+			);
+		  }
+		  
+		  export default App;
+		
+
+	index.js 
+		import App from ‘./App’;
+		reactDOM.render(<App/>, document.getElementById(‘root’))
+
+
+
+
+
+Dynamic Values and Lists in JSX
+
+
+
+
