@@ -65,9 +65,32 @@ src folder
 
 
 
+State:
+	State is basically just data and there two types of state, 
+	components level state 
+		are the data which is associate only one level of component(no other component need to use the data);
+	app level state
+
+how to set state 
+	create a file FeedbackItem.JSX which will include the rating and feedback
+	use _rfce to create the component.... 
+	
+	import the FeedbackItem to the app.
+	have to make the rating and the text part of state ... 
+	import {useState} from 'react' note: the hooks are started with use... 
+
+	inside our function FeedbackItem.... 
+		const[rating, setRating] = useState(7)
+		note the default value is 7 and we have to pass 2 thing the name which is rating and function which is 
+		setRating in brackets to update the rating
+	we can remove the value with rating.
 
 
-Dynamic Values and Lists in JSX
+
+
+
+
+
 
 
 
