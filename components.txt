@@ -1,0 +1,70 @@
+create a folder called components in folder src  
+create a file Header.jsx 
+to create a component and export it use the _rfce creating component
+
+    function Header(props) {
+        return (
+
+            <div className="container">
+                <h2>Feedback UI</h2>
+            </div>
+        )
+    }
+
+    add a header to our Header function 
+    
+    function Header(props) {
+        return (
+            <header>
+                <div className="container">
+                    <h2>Feedback UI</h2>
+                </div>
+            </header>
+        )
+    }
+
+import the Header.jsx into App.js
+import Header  from "./components/Header";
+to use the header above the dive container we have to add a fragment to our code <></> since only one parent can be used 
+function App(){
+    
+    return(
+        <>
+            <Header/>
+            <div className="container">
+                <h1>My App</h1>   
+            </div>
+        </>
+    )
+}
+
+export default App;
+
+we can pass a props into components
+to do so we need to change the header to 
+<header text = 'Hello, world!'/>
+lets go to header.jsx pass our props as a parameter in our Header.jsx
+code will look like this
+function Header(props){
+    return(
+        <header>
+            <div className="container">
+            <h2>{props.text} </h2>
+            </div>
+        </header?
+    )
+}
+we can also create a default props
+Header.defaultProps ={
+    text: 'Feedback UI'
+}
+we can assign props type
+// impt import proptypes 
+import PropTypes from 'prop-types'
+
+Header.propTypes={
+    text: PropTypes.string,
+}
+
+
+    
