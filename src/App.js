@@ -11,18 +11,31 @@ function App(){
         {id: 3, text: "Comment three"},
         {id: 4, text: "Comment four"}
     ]
+
+    // using condition 
+    let loading= false;
+    if(loading)return <h1>Loading...</h1>
+
+    let commentBlock = (
+        <div className="comment">
+            
+        <ul>
+            {comments.map((comment, index)=>(
+                <li key={index}>{comment.text}</li>
+            ))}
+        </ul>
+    </div>
+    )
+    let showComments = false;
+    let commentMessage = "You have four Comments: "
     return(
         <div className="container">
-            <h1>{title}!</h1>
+            <h1>{title.toUpperCase()}!</h1>
             <p>{body}</p>
             <h3>Number of Comments: {comments.length}</h3>
-            <div className="comment">
-                <ul>
-                    {comments.map((comment, index)=>(
-                        <li key={index}>{comment.text}</li>
-                    ))}
-                </ul>
-            </div>
+            {showComments ? commentBlock : commentMessage+ comments.length}
+
+           
         </div>
     )
 }
